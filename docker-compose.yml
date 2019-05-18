@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx:
+    restart: always
+    build: .
+    ports:
+#      - "8000:80"
+#      - "8000:80"
+#      - "8443:443"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/projects
+      - /root/server/AgentSite/static:/projects/agentsite/static
+      - /root/server/LV/static:/projects/handan/static
+      - /root/server/LianHua/static:/projects/lianhua/static

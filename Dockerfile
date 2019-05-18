@@ -6,9 +6,9 @@ RUN makedir -p /projects/logs/handan /projects/logs/lianhua /projects/logs/agent
 
 WORKDIR /projects
 
-ADD /root/server/AgentSite/static /projects/agentsite/static
-ADD /root/server/LV/static /projects/handan/static
-ADD /root/server/LianHua/static /projects/lianhua/static
+# ADD /root/server/AgentSite/static /projects/agentsite/static
+# ADD /root/server/LV/static /projects/handan/static
+# ADD /root/server/LianHua/static /projects/lianhua/static
 
 ADD .
 
