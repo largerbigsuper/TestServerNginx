@@ -11,6 +11,7 @@ services:
       - "443:443"
     volumes:
       - .:/projects
-      - /root/server/AgentSite/static:/projects/agentsite/static
-      - /root/server/LV/static:/projects/handan/static
-      - /root/server/LianHua/static:/projects/lianhua/static
+      # - /Users/turkey/PycharmProjects/AgentSite/static:/projects/static/agentsite/static
+      - /root/server/AgentSite/static:/projects/static/agentsite/static
+      - /root/server/LV/static:/projects/static/handan/static
+      - /root/server/LianHua/static:/projects/static/lianhua/static

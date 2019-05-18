@@ -1,8 +1,8 @@
 FROM nginx:1.15.8
 COPY nginx.conf /etc/nginx/nginx.conf
 
-RUN makedir -p /projects/handan /projects/lianhua /projects/agentsite
-RUN makedir -p /projects/logs/handan /projects/logs/lianhua /projects/logs/agentsite
+RUN mkdir -p /projects/static/handan/static /projects/static/lianhua/static /projects/static/agentsite/static
+RUN mkdir -p /projects/logs/handan /projects/logs/lianhua /projects/logs/agentsite
 
 WORKDIR /projects
 
@@ -10,6 +10,6 @@ WORKDIR /projects
 # ADD /root/server/LV/static /projects/handan/static
 # ADD /root/server/LianHua/static /projects/lianhua/static
 
-ADD .
+ADD . .
 
 CMD ["nginx", "-g", "daemon off;"]
